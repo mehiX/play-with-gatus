@@ -1,0 +1,17 @@
+external-endpoints:
+  - name: mihai-ep-1
+    group: mihai-group-test
+    token: "mihai"
+  - name: mihai-ep-2
+    group: mihai-group-test
+    token: "mihai2"
+
+endpoints:
+  - name: front-end
+    group: core
+    url: "https://twin.sh/health"
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+      - "[BODY].status == UP"
+      - "[RESPONSE_TIME] < 150"
