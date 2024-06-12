@@ -1,5 +1,5 @@
 services:
-  gatos:
+  gatus:
     image: twinproduction/gatus
     ports:
       - "9090:8080"
